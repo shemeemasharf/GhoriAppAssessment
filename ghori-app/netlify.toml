@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/your-project-name"
+  publish = "dist/ghori-app"
   command = "ng build --configuration production"
 
 [[redirects]]
