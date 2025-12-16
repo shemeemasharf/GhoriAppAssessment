@@ -1,0 +1,36 @@
+<app-nav-bar></app-nav-bar>
+<section class="shop">
+  <!-- Hero Section -->
+  <div class="shop__hero">
+    <div class="shop__hero-content">
+      <h1>Dress Your Style</h1>
+      <p>Discover trends that define you</p>
+      <button class="shop__cta">Shop Now</button>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="shop__container">
+    <h2 class="shop__title">Latest Collection</h2>
+
+    <div class="shop__grid">
+      <!-- Product Card -->
+      <div class="product-card" *ngFor="let product of products">
+        <div class="product-card__image">
+          <img [src]="product.image" [alt]="product.title" />
+          <span class="product-card__price">${{ product.price }}</span>
+        </div>
+
+        <div class="product-card__content">
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.category }}</p>
+
+          <button class="product-card__btn">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

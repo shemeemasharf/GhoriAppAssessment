@@ -1,0 +1,132 @@
+.fashion-ads {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  &__container {
+    display: flex;
+    align-items: center;      /* vertically center text + image */
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap;        /* keep image on right, don’t wrap */
+  }
+
+  /* LEFT SIDE */
+  &__left {
+    flex: 1 1 50%;           /* take ~50% of container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    min-width: 280px;
+  }
+
+  &__title {
+    font-size: clamp(4rem, 6vw, 6.5rem);
+    color: #d6002f;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: -3rem;
+    line-height: 1.1;
+  }
+
+  &__quotes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Unbounded', sans-serif;
+
+    li {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #222;
+      margin-bottom: 1.2rem;
+      padding-left: 1.6rem;
+      position: relative;
+      line-height: 1.6;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+        color: #d6002f;
+        font-size: 1.4rem;
+      }
+
+      &:hover {
+        color: #d6002f;
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  /* RIGHT SIDE */
+  &__right {
+    flex: 0 0 40%;            /* reduce image width to 40% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 200px;          /* optional: prevent too small */
+  }
+
+  &__right img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;      /* optional: give image a soft capsule shape */
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    &__container {
+      flex-wrap: wrap;        /* allow wrapping if needed */
+      gap: 1.5rem;
+    }
+
+    &__left, &__right {
+      flex: 1 1 100%;
+    }
+
+    &__title {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    &__quotes li {
+      padding-left: 0;
+      text-align: center;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__right {
+      justify-content: center;
+      margin-bottom: 2rem; /* small spacing under text */
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__quotes li {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* Prevent horizontal overflow globally */
+body, html {
+  overflow-x: hidden;
+}

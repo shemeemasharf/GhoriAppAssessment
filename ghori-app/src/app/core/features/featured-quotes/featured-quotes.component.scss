@@ -1,0 +1,63 @@
+.featured-quote {
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 33%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: url('/promotions/s.png') center/cover no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+    border-radius: 10px;
+  }
+
+  blockquote {
+    font-family: 'Alex Brush', cursive; /* ← using Google Font */
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 400;
+    font-style: normal;
+    color: #0e3f1e;
+    max-width: 800px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+
+    span {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-style: normal;
+      color: #555;
+      font-weight: 400;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .featured-quote {
+    padding: 4rem 1.5rem;
+
+    &::before {
+      width: 50%;
+    }
+
+    blockquote {
+      font-size: 1.6rem;
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+.best-sellers {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  padding: 60px 50px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+
+    &__testimonial {
+      margin-bottom: 40px;
+
+      &-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-style: italic;
+        color: #2c3e50;
+        position: relative;
+
+        &::before {
+          content: '"';
+          position: absolute;
+          left: -20px;
+          top: -10px;
+          font-size: 50px;
+          font-weight: 900;
+          color: #e74c3c;
+        }
+      }
+    }
+
+    &__product {
+      margin-bottom: 50px;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+
+      &-name {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      &-price {
+        font-size: 28px;
+        font-weight: 700;
+        color: #2c5282;
+      }
+    }
+
+    &__philosophy {
+      margin-bottom: 40px;
+
+      &__title {
+        font-family: 'Great Vibes', cursive;
+        font-size: 36px;
+        font-weight: 400;
+        color: #e74c3c;
+        margin-bottom: 20px;
+      }
+
+      &__desc {
+        font-size: 18px;
+        color: #555;
+        max-width: 500px;
+      }
+    }
+
+    &__cta {
+      .best-sellers__button {
+        font-family: 'Montserrat', sans-serif;
+        border: 2px solid #e74c3c;
+        background: #fff;
+        color: #e74c3c;
+        padding: 16px 40px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(231, 76, 60, 0.2);
+
+        &:hover {
+          background: #e74c3c;
+          color: #fff;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+        }
+
+        &::after {
+          content: '→';
+          margin-left: 10px;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    .best-sellers__item {
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px;
+      background: #f9f9f9;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 5px 0 3px 0;
+      }
+
+      p {
+        font-size: 16px;
+        color: #777;
+        margin: 0;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .best-sellers__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .best-sellers__grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .best-sellers {
+    padding: 40px 20px;
+  }
+
+  .best-sellers__grid-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .best-sellers__text__testimonial-text {
+    font-size: 24px;
+  }
+
+  .best-sellers__product-name {
+    font-size: 28px;
+  }
+
+  .best-sellers__product-price {
+    font-size: 24px;
+  }
+
+  .best-sellers__philosophy__title {
+    font-size: 28px;
+  }
+}

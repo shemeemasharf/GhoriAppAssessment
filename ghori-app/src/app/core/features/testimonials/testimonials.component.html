@@ -1,0 +1,77 @@
+<div class="container">
+  <!-- Header section -->
+  <section class="header-section">
+    <h1>Loved by <span>Fashion Icons</span></h1>
+    <p>Style leaders trust our commitment to craftsmanship, validating our elegant designs and fostering lasting relationships.</p>
+  </section>
+
+  <!-- Brands section - Fashion brands -->
+  <!-- <section class="brands-section">
+    <h2>Featured in</h2>
+    <div class="brands-grid">
+      <div class="brand-item">Vogue</div>
+      <div class="brand-item">Elle</div>
+      <div class="brand-item">Harper's Bazaar</div>
+      <div class="brand-item">Cosmopolitan</div>
+    </div>
+  </section> -->
+
+  <!-- Main testimonial card -->
+  <section class="testimonial-card">
+    <div class="testimonial-content">
+      <div class="stars">
+        <i class="fas fa-star" *ngFor="let star of [1,2,3,4,5]"></i>
+      </div>
+
+      <p class="testimonial-text">
+        "The Aurelia collection has completely transformed my wardrobe. The sustainable fabrics, impeccable tailoring, and timeless designs exceed all expectations. As a fashion editor, I've never been more impressed with a brand's attention to detail and commitment to ethical fashion."
+      </p>
+
+      <div class="testimonial-author">
+        <div class="author-avatar">
+          <div class="avatar-placeholder">SJ</div>
+        </div>
+        <div class="author-info">
+          <h4>Sophia Johnson</h4>
+          <p>Fashion Editor, Vogue Magazine</p>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">94%<span>▲</span></div>
+          <div class="stat-label">Customer satisfaction rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">42%<span>▲</span></div>
+          <div class="stat-label">Repeat customers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback section -->
+  <section class="feedback-section">
+    <h2>Was this review helpful?</h2>
+    <p class="feedback-subtext">Your feedback helps us improve our collections</p>
+    <div class="feedback-options">
+      <button class="feedback-btn positive" >
+        <i class="fas fa-thumbs-up"></i> Yes, very helpful
+      </button>
+      <button class="feedback-btn neutral">
+        <i class="fas fa-meh"></i> Somewhat helpful
+      </button>
+      <button class="feedback-btn negative" >
+        <i class="fas fa-thumbs-down"></i> Not helpful
+      </button>
+    </div>
+    <div id="feedback-message"></div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2023 Elegance Collection. All rights reserved.</p>
+    <p class="footer-subtext">Crafted with passion for sustainable fashion</p>
+  </div>
+</footer>
